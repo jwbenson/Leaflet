@@ -26,9 +26,8 @@ L.extend(L.DomEvent, {
 			return this.addPointerListenerEnd(obj, type, handler, id);
 		case 'touchmove':
 			return this.addPointerListenerMove(obj, type, handler, id);
-		default:
-			throw 'Unknown touch event type';
 		}
+		return this;
 	},
 
 	addPointerListenerStart: function (obj, type, handler, id) {
